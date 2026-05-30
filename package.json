@@ -1,0 +1,33 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "nodejs resful api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwin-gholkar/node-rest-shop.git"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "ashwin gholkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashwin-gholkar/node-rest-shop/issues"
+  },
+  "homepage": "https://github.com/ashwin-gholkar/node-rest-shop#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "body-parser": "^2.2.2",
+    "mongoose": "^9.6.3",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.14"
+  }
+}
