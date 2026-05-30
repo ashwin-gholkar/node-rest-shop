@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/ashwin-gholkar/node-rest-shop#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "multer": "^2.1.1"
   },
   "devDependencies": {
     "body-parser": "^2.2.2",

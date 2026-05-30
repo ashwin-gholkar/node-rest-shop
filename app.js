@@ -10,13 +10,16 @@ mongoose
   )
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
+mongoose.Promise = global.Promise; //to use the default promise library of node
 
 console.log("Password:", process.env.MONGO_ATLAS_PW);
 
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
+const userRoutes = require("./api/routes/user");
 
 app.use(morgan("dev"));
+app.use("/uploads", express.static("uploads")); //to make the uploads folder publically available
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -37,6 +40,7 @@ app.use((req, res, next) => {
 //registering endpoints
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
+app.use("/users", userRoutes);
 
 //handle errors using middlewale
 app.use((req, res, next) => {
